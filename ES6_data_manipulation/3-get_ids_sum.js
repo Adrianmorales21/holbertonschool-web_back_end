@@ -1,6 +1,10 @@
-/* enlist-disable */
-function getStudentIdsSum(students) {
-    return students.reduce((sum, student) => sum + student.id, 0);
-}
+/* eslint-disable */
 
-export default getStudentIdsSum;
+export default function getStudentIdsSum(students) {
+    if (!Array.isArray(students)) {
+        return [];
+    }
+
+    const reduce = students.reduce((accumulator, currentValue) => accumulator + currentValue.id, 0);
+    return reduce;
+}
