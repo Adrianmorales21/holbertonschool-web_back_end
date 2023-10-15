@@ -1,4 +1,5 @@
-/* enlist-disable */
+/* eslint-disable */
+
 export default function updateStudentGradeByCity(students, city, newGrades) {
     if (!Array.isArray(students)) {
         return [];
@@ -15,6 +16,5 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
         }
         return newObj;
     });
-
     return map;
 }
