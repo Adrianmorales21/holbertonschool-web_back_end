@@ -1,6 +1,6 @@
-/* enlist-disable */
-function setFromArray(array) {
-    return new Set(array);
-}
+/* eslint-disable */
 
-export default setFromArray;
+export default function setFromArray(array) {
+    const set = new Set(array);
+    return set;
+}
