@@ -1,11 +1,6 @@
-/* enlist-disable */
-function hasValuesFromArray(set, array) {
-    for (const element of array) {
-        if (!set.has(element)) {
-            return false;
-        }
-    }
-    return true;
-}
+/* eslint-disable */
 
-export default hasValuesFromArray;
+export default function hasValuesFromArray(set, array) {
+    const has = array.every((value) => set.has(value));
+    return has;
+}
