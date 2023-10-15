@@ -1,27 +1,15 @@
-/* enlist-disable */
-function updateUniqueItems(groceriesMap) {
-    if (!(groceriesMap instanceof Map)) {
-        throw new Error('Cannot process');
+/* eslint-disable */
+
+export default function updateUniqueItems(map) {
+    if (!(map instanceof Map)) {
+        throw Error('Cannot process');
     }
 
-    for (const [item, quantity] of groceriesMap) {
-        if (quantity === 1) {
-            groceriesMap.set(item, 100);
+    for (const [key, value] of map.entries()) {
+        if (value === 1) {
+            map.set(key, 100);
         }
     }
+
+    return map;
 }
-
-export default updateUniqueItems;/* enlist-disable */
-function updateUniqueItems(groceriesMap) {
-    if (!(groceriesMap instanceof Map)) {
-        throw new Error('Cannot process');
-    }
-
-    for (const [item, quantity] of groceriesMap) {
-        if (quantity === 1) {
-            groceriesMap.set(item, 100);
-        }
-    }
-}
-
-export default updateUniqueItems;
