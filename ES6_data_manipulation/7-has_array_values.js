@@ -1,10 +1,6 @@
 /* eslint-disable */
 
-export default function cleanSet(set, startString) {
-    let result = '';
-    if (!startString || !startString.length) return result;
-    set.forEach((i) => {
-        if (i && i.startsWith(startString)) result += `${i.slice(startString.length)}-`;
-    });
-    return result.slice(0, result.length - 1);
+export default function hasValuesFromArray(set, array) {
+    const has = array.every((value) => set.has(value));
+    return has;
 }
